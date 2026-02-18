@@ -107,6 +107,8 @@ check just      "just"      "$(just --version 2>/dev/null | awk '{print $2}')"
 check yt-dlp    "yt-dlp"    "$(yt-dlp --version 2>/dev/null)"
 check fastfetch "fastfetch" "$(fastfetch --version 2>/dev/null | awk '{print $2}')"
 check tldr      "tldr"      "$(tldr --version 2>/dev/null | head -1 | awk '{print $2}')"
+check ffmpeg    "ffmpeg"    "$(ffmpeg -version 2>/dev/null | head -1 | awk '{print $3}')"
+check vlc       "vlc"       "$(vlc --version 2>/dev/null | head -1 | awk '{print $3}')"
 
 # ── neovim deps ──────────────────────────────────────────────────────────────
 check luarocks    "luarocks"    "$(luarocks --version 2>/dev/null | head -1 | awk '{print $2}')"
